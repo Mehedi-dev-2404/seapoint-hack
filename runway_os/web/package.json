@@ -1,0 +1,21 @@
+{
+  "name": "runwayos-web",
+  "private": true,
+  "scripts": { "dev": "next dev", "build": "next build", "start": "next start" },
+  "dependencies": {
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "framer-motion": "11.18.2",
+    "lucide-react": "0.474.0"
+  },
+  "devDependencies": {
+    "typescript": "5.7.3",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
+    "@types/node": "22.13.0",
+    "tailwindcss": "3.4.17",
+    "postcss": "8.5.1",
+    "autoprefixer": "10.4.20"
+  }
+}

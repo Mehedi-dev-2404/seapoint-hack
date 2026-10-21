@@ -1,0 +1,5 @@
+anthropic>=0.40
+streamlit
+python-dotenv
+fastapi
+uvicorn

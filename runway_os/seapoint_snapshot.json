@@ -1,0 +1,71 @@
+{
+  "source": "Seapoint MCP (seapoint-staging) snapshot, fetched 2026-10-20",
+  "org": {"id": "org_01m5d80as2e49a633jvtj96892", "name": "Hackathon - Orbit", "currency": "GBP"},
+  "tool_calls": [
+    {"tool": "get_current_user", "summary": "1 organisation: Hackathon - Orbit (ADMIN)"},
+    {"tool": "query_accounts", "summary": "5 open accounts, eligible cash £2,459,110 (incl. £1.2M treasury)"},
+    {"tool": "query_transactions (aggregate by month)", "summary": "Jan–Oct 2026 debit burn, 10 months"},
+    {"tool": "query_transactions (aggregate by category)", "summary": "13 categories, Jul–Oct 2026"},
+    {"tool": "query_transaction_participants + aggregate by participant", "summary": "68 vendors, top 15 by spend"},
+    {"tool": "query_invoices (is_paid=false)", "summary": "25 unpaid (£146,333), 11 overdue (£67,901)"},
+    {"tool": "query_treasury_returns (Oct MTD)", "summary": "£2,289 return, £156 fee, as of 2026-10-19"}
+  ],
+  "accounts": [
+    {"name": "Northstar Labs Ltd Treasury", "type": "INVESTMENT", "gbp": 1200687.46, "net_yield_pct": 3.42},
+    {"name": "Northstar Modulr EUR", "type": "BANKING", "gbp": 141881.65},
+    {"name": "Revolut Business GBP", "type": "BANKING", "gbp": 64820.35},
+    {"name": "Northstar Modulr GBP", "type": "BANKING", "gbp": 565400.20},
+    {"name": "HSBC Business Current", "type": "BANKING", "gbp": 486320.18}
+  ],
+  "cash_total_gbp": 2459109.84,
+  "monthly_burn_gbp": {"2026-01": 134200.75, "2026-02": 125966.36, "2026-03": 119555.13, "2026-04": 128355.59, "2026-05": 122998.12, "2026-06": 135711.36, "2026-07": 124805.56, "2026-08": 137026.45, "2026-09": 162333.84, "2026-10_partial_to_19th": 79943.39},
+  "burn_by_category_jul_oct_gbp": {
+    "Payroll & Benefits": 198040, "Hosting & Infrastructure": 130509.18, "Marketing & Advertising": 52617.42,
+    "Travel & Entertainment": 37216.25, "Legal & Professional Fees": 23440, "Subscriptions": 23395.89,
+    "Rent": 13800, "Capital Investments": 9324.8, "Food & Dining": 5430.59, "Office Expenses": 5398.62,
+    "Sales Tax / VAT": 3600, "Bank Fees": 935.49, "General Expenses": 401
+  },
+  "top_vendors_jul_oct_gbp": [
+    {"name": "Remote People Ltd", "spend": 99200, "txns": 3, "category": "Payroll & Benefits"},
+    {"name": "Snowflake", "spend": 87200, "txns": 4, "category": "Hosting & Infrastructure"},
+    {"name": "Fathom Talent Partners", "spend": 33000, "txns": 3, "category": "Payroll & Benefits"},
+    {"name": "Lodgewood Travel", "spend": 30600, "txns": 4, "category": "Travel & Entertainment"},
+    {"name": "Amazon Web Services", "spend": 27350.42, "txns": 8, "category": "Hosting & Infrastructure"},
+    {"name": "(vendor ven_3wandwwfeesay9h51mdwc718a7)", "spend": 23087.42, "txns": 3},
+    {"name": "(vendor ven_45g2bpktpchp2wvde4c91jg4bc)", "spend": 18640, "txns": 1},
+    {"name": "(vendor ven_5rfcqqa3dmnnq1a7dv6mywy7h2)", "spend": 17400, "txns": 4}
+  ],
+  "total_debit_spend_jul_oct_gbp": 504674.52,
+  "vendor_count": 68,
+  "invoices": {
+    "unpaid": {"count": 25, "total_gbp": 146333.19, "earliest_due": "2026-09-15"},
+    "overdue": {"count": 11, "total_gbp": 67900.91},
+    "paid": {"count": 14, "total_gbp": 55718.89},
+    "all_total_gbp": 202052.08
+  },
+  "treasury": {"net_yield_pct": 3.42, "yield_as_of": "2026-05-07", "oct_mtd_return_gbp": 2289.47, "oct_mtd_fee_gbp": 156.10, "balance_gbp": 1200687.46},
+  "low_confidence_categorised": {
+    "note": "No transactions have a null category. These are parked in the catch-all 'General Expenses' with unknown counterparties and no evidence (13 total, 10 shown).",
+    "total_in_catchall": 13,
+    "transactions": [
+      {"id": "txn_46x23qt66wts5s618wkwhttwy8", "date": "2026-08-11", "amount": 159, "description": "ONLINE PAYMENT REF 5521", "counterparty": "Unknown Vendor"},
+      {"id": "txn_62gqhmcyawx6zr0xk0smmxex32", "date": "2026-08-05", "amount": 18, "description": "UNKNOWN WIRE TRANSFER", "counterparty": "Unknown Vendor"},
+      {"id": "txn_4m92wga912kdma2r4w10d6dssb", "date": "2026-07-12", "amount": 182.5, "description": "DIRECT DEBIT - UNRECOGNISED", "counterparty": "Unknown Direct Debit Vendor"},
+      {"id": "txn_15w8000t4t6pzycjfrp5ygymp2", "date": "2026-07-06", "amount": 41.5, "description": "POS PURCHASE 4471", "counterparty": "Unknown Merchant"},
+      {"id": "txn_6v1v50bmj2zn2j6cgb1qr11k4t", "date": "2026-06-19", "amount": 347, "description": "BACS CREDIT REF 3312", "counterparty": "Unknown Vendor"},
+      {"id": "txn_12m6a49vr8abqbx2wtxva2v230", "date": "2026-06-13", "amount": 206, "description": "STANDING ORDER REF 7742", "counterparty": "Unknown Standing Order Payee"},
+      {"id": "txn_3hfjcc05qqjk6bgqbkc4aecs99", "date": "2026-05-14", "amount": 229.5, "description": "PAYPAL *UNKNOWN MERCHANT", "counterparty": "PayPal"}
+    ]
+  },
+  "category_ids": {
+    "Operating Expenses › Legal & Professional Fees": "cat_01m5d80as3e49a636qtgqhykmv",
+    "Operating Expenses › Office Expenses": "cat_01m5d80as3e49a636d1kt8wsjs",
+    "Operating Expenses › Subscriptions": "cat_01m5d80as3e49a635mdeyxbrxp",
+    "Operating Expenses › Bank Fees": "cat_01m5d80as3e49a6375p8brwyx3",
+    "Operating Expenses › General Expenses": "cat_01m5d80as4e49a637tn9ssfy9a",
+    "Operating Expenses › Consulting": "cat_01m5d80as3e49a637fgvv36p2h",
+    "Operating Expenses › Contractors": "cat_01m5d80as4e49a637nccd97v8s",
+    "Operating Expenses › Travel & Entertainment": "cat_01m5d80as3e49a635xhxtade1t",
+    "Cost of Goods Sold › Hosting & Infrastructure": "cat_01m5d80as3e49a634dehyweat6"
+  }
+}
